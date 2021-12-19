@@ -8,10 +8,10 @@ const validate = (inputs) => {
 	}
 
 	//Password Errors
-	if (!inputs.password || inputs.password.length < 6) {
-		errors.password = "Check Password";
-	}
-	return errors;
+	// if (!inputs.password || inputs.password.length < 6) {
+	// 	errors.password = "Check Password";
+	// }
+	// return errors;
 };
 
 export default validate;
