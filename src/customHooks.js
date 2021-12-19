@@ -1,19 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const useForm = (initialValues) => {
 	const [inputs, setInputs] = useState(initialValues);
-	const [errors, setErrors] = useState({});
 
 	const handleSubmit = (event) => {
-		event.preventDefault();
-		const validationErrors = validate(inputs);
-		const noErrors = Object.keys(validationErrors).length === 0;
-		setErrors(validationErrors);
-		if (noErrors) {
-			console.log("Authenticated", inputs);
-		} else {
-			console.log("errors try again", validationErrors);
+		if (event) {
+			event.preventDefault();
 		}
+		console.log(inputs);
 	};
 
 	const handleInputChange = (event) => {
