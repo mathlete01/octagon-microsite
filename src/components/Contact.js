@@ -1,11 +1,17 @@
 import React from "react";
+import useForm from "../customHooks";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import validate from "../validate";
 
-function Contact() {
+const Contact = () => {
+	const { inputs, handleInputChange, handleSubmit, errors } = useForm(
+		{ email: "", password: "" },
+		validate
+	);
 	return (
 		<div className="Contact">
 			<Container>
@@ -13,7 +19,7 @@ function Contact() {
 					<h1>Contact Us</h1>
 				</Row>
 				<Row className="mb-3">
-					<Form>
+					<Form onSubmit={handleSubmit}>
 						<Row className="mb-3">
 							<Form.Group as={Col} controlId="formGridPassword">
 								<Form.Label>First Name</Form.Label>
@@ -28,7 +34,14 @@ function Contact() {
 						<Row className="mb-3">
 							<Form.Group as={Col} controlId="formGridEmail">
 								<Form.Label>Email</Form.Label>
-								<Form.Control type="email" placeholder="steve@apple.com" />
+								<Form.Control
+									type="email"
+									name="email"
+									onChange={handleInputChange}
+									value="{inputs.email}"
+									required
+								/>
+								{/* {errors.email && <p>errors.email</p>} */}
 							</Form.Group>
 						</Row>
 
@@ -55,6 +68,6 @@ function Contact() {
 			</Container>
 		</div>
 	);
-}
+};
 
 export default Contact;
