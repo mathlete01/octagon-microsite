@@ -2,17 +2,19 @@ import React from "react";
 import hero from "../assets/Stocksy_comp_3976971.jpeg";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
 function Home() {
 	return (
 		<div className="Home">
 			<Container>
-				<Row>
+				<Row className="mb-3">
+					<h1>Welcome to Octopus</h1>
+				</Row>
+				<Row className="mb-3">
 					<Image src={hero} fluid />
 				</Row>
-				<Row>
+				<Row className="mb-3">
 					<p>
 						On the other hand, we denounce with righteous indignation and
 						dislike men who are so beguiled and demoralized by the charms of

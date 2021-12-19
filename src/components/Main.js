@@ -8,7 +8,7 @@ const Main = () => {
 	return (
 		<Routes>
 			{/* The Routes decides which component to show based on the current URL */}
-			<Route path="/home" element={<Home />}></Route>
+			<Route path="/" element={<Home />}></Route>
 			<Route path="/contact" element={<Contact />}></Route>
 		</Routes>
 	);
