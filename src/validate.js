@@ -1,4 +1,5 @@
 const validate = (inputs) => {
+	console.log(`inputs = `, inputs);
 	// Email errors
 	const errors = {};
 	if (!inputs.email) {
@@ -29,9 +30,9 @@ const validate = (inputs) => {
 	}
 
 	// State Errors
-	if (!inputs.stateabb) {
-		errors.stateabb = "Check State";
-	}
+	// if (!inputs.stateabb) {
+	// 	errors.stateabb = "Check State";
+	// }
 
 	return errors;
 };
