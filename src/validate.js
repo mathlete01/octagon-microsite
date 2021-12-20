@@ -31,12 +31,6 @@ const validate = (inputs) => {
 	// State Errors
 	if (!inputs.stateabb) {
 		errors.stateabb = "Check State";
-	} else if (
-		!/^(([Aa][EeLlKkSsZzRr])|([Cc][AaOoTt])|([Dd][EeCc])|([Ff][MmLl])|([Gg][AaUu])|([Hh][Ii])|([Ii][DdLlNnAa])|([Kk][SsYy])|([Ll][Aa])|([Mm][EeHhDdAaIiNnSsOoTt])|([Nn][EeVvHhJjMmYyCcDd])|([Mm][Pp])|([Oo][HhKkRr])|([Pp][WwAaRr])|([Rr][Ii])|([Ss][CcDd])|([Tt][NnXx])|([Uu][Tt])|([Vv][TtIiAa])|([Ww][AaVvIiYy]))$/gm.test(
-			inputs.stateabb
-		)
-	) {
-		errors.stateabb = "Invalid state";
 	}
 
 	return errors;
