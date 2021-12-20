@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
 import Contact from "../components/Contact";
 
-const Main = () => {
+function Main() {
 	return (
 		<Routes>
 			{/* The Routes decides which component to show based on the current URL */}
@@ -12,6 +12,6 @@ const Main = () => {
 			<Route path="/contact" element={<Contact />}></Route>
 		</Routes>
 	);
-};
+}
 
 export default Main;
