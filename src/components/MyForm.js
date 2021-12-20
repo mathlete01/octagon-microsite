@@ -30,8 +30,9 @@ const MyForm = () => {
 						value={inputs.firstName}
 						required
 					/>
+					<p className="errors">{errors.firstName}</p>
 				</Form.Group>
-				{errors.firstName && <p>errors.firstName</p>}
+
 				<Form.Group as={Col}>
 					<Form.Label>Last Name</Form.Label>
 					<Form.Control
@@ -42,6 +43,7 @@ const MyForm = () => {
 						value={inputs.lastName}
 						required
 					/>
+					<p className="errors">{errors.lastname}</p>
 				</Form.Group>
 			</Row>
 			<Row className="mb-3">
@@ -55,9 +57,9 @@ const MyForm = () => {
 						placeholder="steve@apple.com"
 						required
 					/>
+					<p className="errors">{errors.email}</p>
 				</Form.Group>
 			</Row>
-			{errors.email && <p>errors.email</p>}
 			<Row className="mb-3">
 				<Form.Group as={Col}>
 					<Form.Label>Zipcode</Form.Label>
@@ -69,8 +71,8 @@ const MyForm = () => {
 						placeholder="95014"
 						required
 					/>
+					<p className="errors">{errors.zipcode}</p>
 				</Form.Group>
-				{errors.zipcode && <p>errors.zipcode</p>}
 				<Form.Group as={Col}>
 					<Form.Label>State</Form.Label>
 					<Form.Select defaultValue="Choose...">
@@ -128,7 +130,6 @@ const MyForm = () => {
 						<option value="WY">WY</option>
 					</Form.Select>
 				</Form.Group>
-				{errors.stateabb && <p>errors.stateabb</p>}
 			</Row>
 
 			<Button variant="primary" type="submit">

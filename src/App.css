@@ -1,3 +1,8 @@
 .App {
 	text-align: left;
 }
+
+.errors {
+	color: red;
+	font-style: italic;
+}

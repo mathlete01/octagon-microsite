@@ -9,7 +9,7 @@ import Main from "./components/Main.js";
 function App() {
 	return (
 		<div className="App">
-			<Navbar bg="light" variant="light">
+			<Navbar bg="light" variant="light" sticky="top">
 				<Container>
 					<Navbar.Brand href="#home">
 						<img
