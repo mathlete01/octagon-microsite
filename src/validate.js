@@ -7,11 +7,14 @@ const validate = (inputs) => {
 		errors.email = "Invalid email address";
 	}
 
-	//Password Errors
-	// if (!inputs.password || inputs.password.length < 6) {
-	// 	errors.password = "Check Password";
-	// }
-	// return errors;
+	//Name Errors
+	if (!inputs.firstName) {
+		errors.firstName = "Check First Name";
+	} else if (!/^[a-zA-Z]*$/g.test(inputs.firstName)) {
+		errors.firstName = "Invalid first name";
+	}
+
+	return errors;
 };
 
 export default validate;
